@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background = "@color/White"
+    tools:context="com.motivosity.android.LoginActivity">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/scrollView2"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:paddingLeft="10dp"
+            android:id="@+id/linearLayout3"
+            android:background="#2B7299"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:gravity="bottom">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/avatarImg"
+                android:background="@drawable/home_avatar_image_design"
+                android:layout_alignParentStart="false"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="bottom"
+                android:layout_alignParentLeft="false"
+                android:layout_alignParentTop="false"
+                android:padding="1dp" />
+
+            <Spinner
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:id="@+id/home_spinner"
+                android:background="#00ffffff"
+                android:layout_alignBottom="@+id/avatarImg"
+                android:layout_alignParentEnd="true"
+                android:visibility="visible"
+                android:alpha="0" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="What&apos;s new in my "
+                android:id="@+id/textView17"
+                android:textSize="16dp"
+                android:layout_alignBottom="@+id/avatarImg"
+                android:layout_toStartOf="@+id/CompanyValue"
+                android:paddingBottom="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Team"
+                android:id="@+id/CompanyValue"
+                android:textSize="16dp"
+                android:layout_alignTop="@+id/textView17"
+                android:layout_alignEnd="@+id/home_spinner"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/White"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView"
+        android:layout_marginTop="73dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="false"
+        android:background="#2B7299" />
+
+</RelativeLayout>

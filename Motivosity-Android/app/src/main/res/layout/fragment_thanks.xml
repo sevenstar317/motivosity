@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background = "#d8eff7"
+    tools:context="com.motivosity.android.LoginActivity">
+
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:id="@+id/userName"
+        android:gravity="center_vertical"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:paddingLeft="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/thanks_textfield_back_design"
+        android:hint="Username"
+        android:textColor="@color/Black"
+        android:singleLine="true"
+        android:inputType="textFilter" />
+
+    <RelativeLayout
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@+id/userName"
+        android:layout_alignStart="@+id/userName"
+        android:gravity="center_vertical|center_horizontal">
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/userAvatar"
+            android:layout_margin="8dp"
+            android:background="@drawable/thanks_avatar_image_back"
+            android:padding="2dp"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center_vertical"
+        android:weightSum="2"
+        android:layout_marginTop="20dp"
+        android:id="@+id/linearLayout"
+        android:layout_below="@+id/userName">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Company Value"
+            android:id="@+id/textView8"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:background="@drawable/thanks_label_back_design" />
+
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/thanks_linear_back_design"
+            android:gravity="center_vertical"
+            android:paddingTop="3dp">
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner"
+                android:gravity="center_vertical"
+                android:spinnerMode="dropdown"
+                android:nestedScrollingEnabled="false"
+                android:prompt="@string/company_init_value"
+                android:background="#00FFFFFF"
+                android:layout_alignTop="@+id/imageView"
+                android:layout_alignParentStart="false"
+                android:layout_toStartOf="@+id/imageView"
+                android:layout_alignEnd="@+id/imageView"
+                android:layout_marginRight="10dp" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/imageView"
+                android:src="@drawable/ic_arrow_down"
+                android:layout_marginRight="5dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center_vertical"
+        android:id="@+id/linearLayout2"
+        android:layout_below="@+id/linearLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Bonus Amount"
+            android:id="@+id/textView9"
+            android:layout_weight="1"
+            android:background="@drawable/thanks_label_back_design"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp" />
+
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/thanks_linear_back_design"
+            android:gravity="center_vertical">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/txtAmount"
+                android:hint="amount"
+                android:textColor="@color/Black"
+                android:singleLine="true"
+                android:paddingLeft="30dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:numeric="integer"
+                android:background="@drawable/thanks_linear_back_design" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$"
+                android:id="@+id/txtDollar"
+                android:textColor="@color/Black"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="15dp"
+                android:textSize="22dp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="false"
+        android:id="@+id/commentWrapper"
+        android:background="#f2f2f2"
+        android:layout_alignParentStart="false"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:gravity="center_vertical">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:id="@+id/relativeLayout"
+            android:layout_above="@+id/commentWrapper"
+            android:layout_alignStart="@+id/linearLayout2"
+            android:layout_weight="0.8">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtComment"
+                android:hint="Add your comment"
+                android:textColor="@color/Black"
+                android:singleLine="true"
+                android:background="@drawable/thanks_textfield_back_design"
+                android:padding="10dp"
+                android:layout_alignParentBottom="false"
+                android:layout_alignParentEnd="false"
+                android:layout_alignParentTop="false"
+                android:layout_alignParentLeft="false"
+                android:gravity="center_vertical" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Post"
+                android:id="@+id/txtPost"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/Gray"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:id="@+id/listView2"
+        android:layout_below="@+id/userName"
+        android:layout_alignStart="@+id/userName"
+        android:layout_marginRight="10dp"
+        android:background="@color/DimGray"
+        android:visibility="gone" />
+
+
+</RelativeLayout>
